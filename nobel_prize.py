@@ -5,8 +5,11 @@ import requests
 # Dokumentation, hjälp samt verktyg för att testa apiet fins här: https://app.swaggerhub.com/apis/NobelMedia/NobelMasterData/2.1
 
 HELP_STRING = """
-Ange ett år och fält
+1- Ange ett år och fält
 Exempelvis 1965 fysik
+2- välj detta om du är osäker
+Q- stäng av
+H- hjälp
 """
 
 cat = {"fysik": "phy",
@@ -31,10 +34,25 @@ def main():
         print(HELP_STRING)
         # TODO 5p Skriv bara ut hjälptexten en gång när programmet startar inte efter varje gång användaren matat in en fråga
         #      Förbättra hjälputskriften så att användaren vet vilka fält, exempelvis kemi som finns att välja på
+        meny = input("Skriv ett fält:").upper().strip()
+        if meny == "1":
+            pass
+        if meny == "2":
+            print("Fälten")
+            for item in cat:
+                print(item)
+                pass
 
         # TODO 5p Gör så att det finns ett sätt att avsluta programmet, om användaren skriver Q så skall programmet stängas av
         #      Beskriv i hjälptexten hur man avslutar programmet
         # TODO 5p Gör så att hjälptexten skrivs ut om användaren skriver h eller H
+        if meny_choice() == "H":
+            print (HELP_STRING)
+            if meny_choice.upper() =="Q":
+                print ("Tack och hejdå!")
+                return
+
+
         aaa = input(">")
         a, b = aaa.split()
         c = cat[b]
