@@ -36,14 +36,14 @@ def checkfield(field: str):
         return True
 
 
-# def get prizers from year and field
+# def summa, årtal och fält
 def getInforamationFromServer(year: int, field: str):
     params = {"nobelPrizeYear": year, "nobelPrizeCategory": cat[field]}
     res = requests.get("http://api.nobelprize.org/2.1/nobelPrizes", params=params).json()
     return res
 
 
-# print all informations for year
+# print alla årtal
 def printAllInformationsForYear(year: int):
     for item in cat:
         print("*" * 30)
@@ -124,7 +124,7 @@ def printOneFieldForYear(year: int, field: str):
         print(f"The Today's value for each prizer is {result2}")
 
 
-# print the result
+# print resultat
 def printResult(peng: float, idagpeng: float, prize_cnt: int):
     print("*" * 30)
     money_for_thattime = calcMoneyForEachPrize(peng, prize_cnt)
