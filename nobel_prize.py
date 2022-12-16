@@ -44,7 +44,7 @@ def getInforamationFromServer(year: int, field: str):
 
 
 # print information om årtal
-def  printOneFieldForYear(year: int):
+def  print_all_information_for_year(year: int):
     for item in cat:
         print("*" * 30)
         print(f"Field is {item}")
@@ -137,7 +137,7 @@ def printResult(peng: float, idagpeng: float, prize_cnt: int):
 
 
 # print år och fält
-def printOneFieldForYear(year: int, field: str):
+def printOneFieldForyear(year: int, field: str):
     res = getInforamationFromServer(int(year), field)
 
     for p in res["nobelPrizes"]:
