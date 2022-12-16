@@ -34,9 +34,8 @@ def main():
 
         # TODO 5p Skriv bara ut hjälptexten en gång när programmet startar inte efter varje gång användaren matat in en fråga
         #      Förbättra hjälputskriften så att användaren vet vilka fält, exempelvis kemi som finns att välja på
-        meny_val = input("Välj ett av fälten \n(Välj 1, 2, hjälp(H) eller avsluta(Q)) ").upper().strip()
-        if meny_val == "1":
-            pass
+        meny_val = input("Välj ett av fälten \nSkriv enligt hjälprutan (år,fält), hjälp(H) eller avsluta(Q) ").upper().strip()
+
         if meny_val == "2":
             print("Fälten")
             for item in cat:
