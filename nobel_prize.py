@@ -6,8 +6,8 @@ import requests
 
 HELP_STRING = """
 1- Ange ett år och fält
-Exempelvis 1965 fysik
-2- välj detta om du är osäker
+Exempelvis: 1965 fysik
+2- välj 2 om du är osäker
 Q- stäng av
 H- hjälp
 """
@@ -34,10 +34,10 @@ def main():
         print(HELP_STRING)
         # TODO 5p Skriv bara ut hjälptexten en gång när programmet startar inte efter varje gång användaren matat in en fråga
         #      Förbättra hjälputskriften så att användaren vet vilka fält, exempelvis kemi som finns att välja på
-        meny = input("Skriv ett fält:").upper().strip()
-        if meny == "1":
+        meny_val = input("Välj ett av fälten:").upper().strip()
+        if meny_val == "1":
             pass
-        if meny == "2":
+        if meny_val == "2":
             print("Fälten")
             for item in cat:
                 print(item)
@@ -46,9 +46,9 @@ def main():
         # TODO 5p Gör så att det finns ett sätt att avsluta programmet, om användaren skriver Q så skall programmet stängas av
         #      Beskriv i hjälptexten hur man avslutar programmet
         # TODO 5p Gör så att hjälptexten skrivs ut om användaren skriver h eller H
-        if meny_choice() == "H":
+        if meny_val() == "H":
             print (HELP_STRING)
-            if meny_choice.upper() =="Q":
+            if meny_val.upper() =="Q":
                 print ("Tack och hejdå!")
                 return
 
