@@ -29,12 +29,12 @@ cat = {"fysik": "phy",
 
 
 def main():
-
+    print(HELP_STRING)
     while True:
-        print(HELP_STRING)
+
         # TODO 5p Skriv bara ut hjälptexten en gång när programmet startar inte efter varje gång användaren matat in en fråga
         #      Förbättra hjälputskriften så att användaren vet vilka fält, exempelvis kemi som finns att välja på
-        meny_val = input("Välj ett av fälten:").upper().strip()
+        meny_val = input("Välj ett av fälten \n(Välj 1, 2, hjälp(H) eller avsluta(Q)) ").upper().strip()
         if meny_val == "1":
             pass
         if meny_val == "2":
@@ -46,9 +46,9 @@ def main():
         # TODO 5p Gör så att det finns ett sätt att avsluta programmet, om användaren skriver Q så skall programmet stängas av
         #      Beskriv i hjälptexten hur man avslutar programmet
         # TODO 5p Gör så att hjälptexten skrivs ut om användaren skriver h eller H
-        if meny_val() == "H":
+
             print (HELP_STRING)
-            if meny_val.upper() =="Q":
+            if meny_val.upper() == ("Q"):
                 print ("Tack och hejdå!")
                 return
 
